@@ -11,9 +11,9 @@ class Tokenizer:
         file = open(filename, "r")
         if file.mode == 'r':
             self.program = file.read()
-        self.tokens = self.pre_proccess_input()
+        self.tokens = self.pre_process_input()
 
-    def pre_proccess_input(self):
+    def pre_process_input(self):
         result = self.program.split()
         result = list(filter(None, result))
         return result
