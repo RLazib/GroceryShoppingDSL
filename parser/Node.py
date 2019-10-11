@@ -1,18 +1,15 @@
+from Tokenizer import get_tokenizer
+from OutputWriter import get_output_file
+
 class Node:
 
     def __init__(self):
-        self.target = None
-        self.children = []
+        self.tokenizer = get_tokenizer()
+        self.output_file = get_output_file()
 
-    def root(self):
-        return self
-
-    def parse(self, context):
+    def parse(self):
         pass
 
-    def set_target(self, target):
-        self.target = target
-
-    def get_children(self):
-        return self.children
+    def evaluate(self):
+        pass
 

@@ -13,3 +13,11 @@ class SymbolTable:
 
     def insert(self, name, node):
         self.table[name] = node
+
+symbol_table = None
+
+def get_symbol_table():
+    global symbol_table
+    if symbol_table is None:
+        symbol_table = SymbolTable()
+    return symbol_table
