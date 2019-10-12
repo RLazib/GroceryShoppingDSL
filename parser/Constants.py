@@ -24,6 +24,8 @@ DEF = "def"
 CALL = "call"
 PROCSTART = "procstart"
 PROCEND = "procend"
+CHEAPEST = "cheapest"
+WAY = "way"
 
 # Types
 class Type(Enum):

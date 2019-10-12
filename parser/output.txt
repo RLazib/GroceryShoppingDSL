@@ -1,1 +1,7 @@
-glass of milk
+glass of milk: {"milk": {"quantity": 2.0, "measurement": "cups"}}
+cups: cups
+bananas: ["sketchy asian grocery store", "superstore"]
+sketchy asian grocery store: {"bananas": null, "milk": {"measurement": "cups", "unit cost": 0.625}, "honey": null}
+superstore: {"bananas": null, "milk": {"measurement": "cups", "unit cost": 1.0}, "peanut butter": {"measurement": "cups", "unit cost": 2.0}, "honey": {"measurement": "tablespoons", "unit cost": 0.25}, "ice cubes": {"measurement": "cups", "unit cost": 0.05}}
+The cheapest way to make glass of milk is by buying milk at sketchy asian grocery store. The total cost is 1.25. 
+The cheapest way to make peanut butter banana smoothies is by buying milk at sketchy asian grocery store, peanut butter at superstore, honey at superstore, ice cubes at superstore. The total cost is 2.85. No prices were found for the following ingredients: bananas.

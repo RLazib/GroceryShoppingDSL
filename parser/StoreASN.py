@@ -24,3 +24,8 @@ class StoreASN(ASNStatement):
             i = ingredient.evaluate()
             if i not in store_entry.value:
                 store_entry.value[i] = None
+            ingredient_entry = self.symbol_table.get(i)
+            if ingredient_entry.value is None:
+                ingredient_entry.value = []
+            if store_name not in ingredient_entry.value:
+                ingredient_entry.value.append(store_name)

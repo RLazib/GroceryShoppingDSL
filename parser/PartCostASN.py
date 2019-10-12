@@ -24,5 +24,5 @@ class PartCostASN(ASNStatement):
         if part.ingredient not in store_entry.value:
             raise ParseError("Expected store {0} to be selling {1}.".format(store_name, part.ingredient))
         
-        store_entry.value[part.ingredient] = { "measure": part.measure, "price": self.part_cost / part.quantity }
+        store_entry.value[part.ingredient] = { "measurement": part.measure, "unit cost": self.part_cost / part.quantity }
         
