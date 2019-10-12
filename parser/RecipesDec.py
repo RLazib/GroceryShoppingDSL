@@ -2,10 +2,9 @@ from DecStatement import DecStatement
 from Constants import *
 
 class RecipesDec(DecStatement):
-    def parse(self):
-        self.tokenizer.pop_and_check(RECIPES)
-        self.parse_dec_list()
-
-    def evaluate(self):
-        pass
+    def get_dec_token(self):
+        return RECIPES
+            
+    def get_dec_type(self):
+        return Type.RECIPE
         

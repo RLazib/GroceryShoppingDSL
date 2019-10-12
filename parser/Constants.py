@@ -1,3 +1,6 @@
+from enum import Enum
+
+# literals
 START = "start"
 END = "end"
 NEW = "new"
@@ -22,6 +25,16 @@ CALL = "call"
 PROCSTART = "procstart"
 PROCEND = "procend"
 
+# Types
+class Type(Enum):
+    INGREDIENT = "ingredient"
+    STORE = "store"
+    RECIPE = "recipe"
+    MEASUREMENT = "measurement"
+    PROC = "proc"
+    PARAM = "param"
+
+# special values
 END_OF_LINE = ";"
 SEPARATOR = ","
 NUMBER_MATCHER = "^(\d+\.)?\d+$"

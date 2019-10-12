@@ -6,7 +6,7 @@ from StatementParser import parse_statement
 class ProcBlock(Statement):
     def parse(self):
         self.tokenizer.pop_and_check(WITH)
-        parse_name([PROCSTART])
+        self.param = parse_name([PROCSTART])
         self.tokenizer.pop_and_check(PROCSTART)
         self.statements = []
         while(self.tokenizer.has_next() and self.tokenizer.top() != PROCEND):
@@ -14,5 +14,11 @@ class ProcBlock(Statement):
         self.tokenizer.pop_and_check(PROCEND)
             
     def evaluate(self):
-        pass
+        self.symbol_table.insert(self.param, Type.PARAM, self.arg)
+        for statement in self.statements:
+            statement.evaluate()
+        self.symbol_table.delete(self.param)
+            
+    def set_arg(self, arg):
+        self.arg = arg
      

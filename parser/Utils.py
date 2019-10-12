@@ -12,12 +12,15 @@ def parse_list(end_token):
             tokenizer.pop()
         if full_identifier:
             results.append(full_identifier)
+    tokenizer.pop_and_check(end_token)
     return results
     
 def parse_name(end_tokens):
     full_identifier = ""
     tokenizer = get_tokenizer()
     while tokenizer.has_next() and tokenizer.top() not in end_tokens:
+        if len(full_identifier) > 0:
+            full_identifier += " "
         full_identifier += tokenizer.pop()
     if not tokenizer.has_next():
         raise ParseError("Expected one of the following tokens {0} at line {1}."

@@ -8,12 +8,16 @@ class DecStatement(Statement):
         self.declarations = []
         
     def parse(self):
-        pass
+        self.tokenizer.pop_and_check(self.get_dec_token())
+        self.declarations = parse_list(END_OF_LINE)
 
     def evaluate(self):
+        for dec in self.declarations:
+            self.symbol_table.insert(dec, self.get_dec_type(), None)
+            
+    def get_dec_token(self):
         pass
-        
-    def parse_dec_list(self):
-        self.declarations = parse_list(END_OF_LINE)
-        self.tokenizer.pop_and_check(END_OF_LINE)
+            
+    def get_dec_type(self):
+        pass
      

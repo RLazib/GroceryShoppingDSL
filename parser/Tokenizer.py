@@ -35,13 +35,12 @@ class Tokenizer:
             token = self.tokens[self.current_token]
             self.current_token += 1
             self.column += 1
-            print(token)
             return token
         return None
         
     def pop_and_check(self, expected):
         token = self.pop()
-        if expected == token is None:
+        if expected != token:
             raise ParseError("Invalid token at line {0}. Expected: {1} but received {2}."
                                  .format(self.get_line(), expected, token))
         return token
@@ -62,7 +61,7 @@ class Tokenizer:
     def get_column(self):
         return self.column
         
-    def destroy_tokenizer(self):
+    def destroy(self):
         self.file.close()
 
 tokenizer = None

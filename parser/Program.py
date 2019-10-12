@@ -8,7 +8,7 @@ class Program(Node):
     def parse(self):
         self.tokenizer.pop_and_check(START)
         self.statements = []
-        while(self.tokenizer.has_next() and self.tokenizer.top() != END):
+        while self.tokenizer.has_next() and self.tokenizer.top() != END:
             if self.tokenizer.top() == DEF:
                 statement = ProcDef()
                 statement.parse()
@@ -21,4 +21,5 @@ class Program(Node):
                             .format(END, tokenizer.get_line()))
 
     def evaluate(self):
-        pass
+        for statement in self.statements:
+            statement.evaluate()
