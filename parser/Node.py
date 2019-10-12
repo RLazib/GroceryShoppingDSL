@@ -1,18 +1,17 @@
+from Tokenizer import get_tokenizer
+from OutputWriter import get_output
+from SymbolTable import get_symbol_table
+
 class Node:
 
     def __init__(self):
-        self.target = None
-        self.children = []
+        self.tokenizer = get_tokenizer()
+        self.output = get_output()
+        self.symbol_table = get_symbol_table()
 
-    def root(self):
-        return self
-
-    def parse(self, context):
+    def parse(self):
         pass
 
-    def set_target(self, target):
-        self.target = target
-
-    def get_children(self):
-        return self.children
+    def evaluate(self):
+        pass
 
