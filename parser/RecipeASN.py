@@ -23,5 +23,5 @@ class RecipeASN(ASNStatement):
             
         for recipe_part in self.recipe_parts:
             part = recipe_part.evaluate()
-            recipe_entry.value[part.ingredient] = { "quantity": part.quantity, "measure": part.measure }
+            recipe_entry.value[part.ingredient] = { "quantity": part.quantity, "measurement": part.measure }
         

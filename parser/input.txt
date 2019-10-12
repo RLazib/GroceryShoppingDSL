@@ -13,10 +13,17 @@ def add two cups milk with recipe
 call add two cups milk with glass of milk;
 call add two cups milk with peanut butter banana smoothies;
 you make peanut butter banana smoothies with 2 whole bananas, 0.5 cups of peanut butter, 2 tablespoons of honey, 2 cups of ice cubes;
-you can buy 2 whole bananas at superstore for 2 dollars;
+
 you can buy 2 cups milk at superstore for 2 dollars;
+you can buy 4 cups milk at sketchy asian grocery store for 2.5 dollars;
 you can buy 0.5 cups peanut butter at superstore for 1 dollars;
 you can buy 2 tablespoons honey at superstore for 0.5 dollars;
 you can buy 2 cups ice cubes at superstore for 0.1 dollars;
 print glass of milk;
+print cups;
+print bananas;
+print sketchy asian grocery store;
+print superstore;
+print cheapest way to make glass of milk;
+print cheapest way to make peanut butter banana smoothies;
 end
